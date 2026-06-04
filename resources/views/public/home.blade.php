@@ -51,9 +51,9 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       <svg id="lattice" viewBox="0 0 460 460" aria-label="رسم متحرك لشبكة جرافين سداسية تلتقط أيونات المعادن"></svg>
       <span class="particle p1"><i></i>Au</span>
       <span class="particle p2"><i></i>Li⁺</span>
-      <span class="particle p3"><i></i><bdi dir="ltr">REE<sub>s</sub></bdi></span>
+      <span class="particle p3"><i></i><bdi dir="ltr">REEs</bdi></span>
       <span class="particle p4"><i></i>Ti</span>
-      <span class="particle p5"><i></i>Cu²⁺</span>
+      <span class="particle p5"><i></i>Cu</span>
     </div>
   </div>
 </section>
@@ -81,7 +81,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       @endforeach
     </div>
     <div class="sect-more reveal">
-      <a href="{{ route('material') }}" class="btn btn-grad">صفحة المادة المبتكرة كاملة {!! $arrow !!}</a>
+      <a href="{{ route('material') }}" class="btn btn-grad"> المادة المبتكرة  {!! $arrow !!}</a>
     </div>
   </div>
 </section>
@@ -105,7 +105,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
           @default{{ $a->symbol }}
         @endswitch</div>
         <div><h3>{{ $a->name }}</h3><p>{{ $a->short }}</p></div>
-        <a href="{{ route('app.show', $a->slug) }}" class="more">اقرأ المقال {!! $arrow !!}</a>
+        <a href="{{ route('app.show', $a->slug) }}" class="more">التفاصيل {!! $arrow !!}</a>
       </div>
       @endforeach
 
@@ -115,7 +115,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
           <div class="tile">{!! $appSvg['grid'] !!}</div>
           <div><h3>{{ $overview->name }}</h3><p style="margin:0">{{ $overview->short }}</p></div>
         </div>
-        <span class="more" style="margin:0">عرض المقال {!! $arrow !!}</span>
+        <span class="more" style="margin:0">التفاصيل {!! $arrow !!}</span>
       </a>
       @endif
     </div>
@@ -153,7 +153,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       @endforeach
     </div>
     <div class="sect-more reveal">
-      <a href="{{ route('vision') }}" class="btn btn-grad">صفحة رؤية المستقبل كاملة {!! $arrow !!}</a>
+      <a href="{{ route('vision') }}" class="btn btn-grad"> رؤية المستقبل  {!! $arrow !!}</a>
     </div>
   </div>
 </section>
@@ -172,7 +172,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       @endforeach
     </div>
     <div class="sect-more reveal">
-      <a href="{{ route('features') }}" class="btn btn-grad">صفحة المميزات كاملة {!! $arrow !!}</a>
+      <a href="{{ route('features') }}" class="btn btn-grad"> المميزات  {!! $arrow !!}</a>
     </div>
   </div>
 </section>

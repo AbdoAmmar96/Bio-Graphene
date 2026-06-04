@@ -14,10 +14,6 @@
   <article class="article">
     <header class="article-head">
       <div class="article-head-inner">
-        <a href="{{ $backTo }}" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M11 18l6-6-6-6"/></svg>
-          رجوع
-        </a>
         <span class="eyebrow"><span class="dot"></span>{{ $eyebrow }}</span>
         <h1>{{ $title }}</h1>
         @if(!empty($subtitle))<p class="sub">{{ $subtitle }}</p>@endif

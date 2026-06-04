@@ -7,16 +7,8 @@
 <main>
   <section class="page-hero">
     <div class="wrap">
-      <div class="page-head">
-        <div class="page-head-main">
-          <span class="eyebrow"><span class="dot"></span>Gallery</span>
-          <h1 class="sect-title">معرض <span class="grad-text">الصور</span></h1>
-        </div>
-        <a href="{{ url('/') }}" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M11 18l6-6-6-6"/></svg>
-          الرئيسية
-        </a>
-      </div>
+      <span class="eyebrow"><span class="dot"></span>Gallery</span>
+      <h1 class="sect-title">معرض <span class="grad-text">الصور</span></h1>
       <p class="sect-lead">لقطات من المعمل وعمليات الإنتاج والمادة النانوية.</p>
     </div>
   </section>

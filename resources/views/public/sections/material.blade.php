@@ -11,16 +11,8 @@ $arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 <main>
   <section class="page-hero">
     <div class="wrap">
-      <div class="page-head">
-        <div class="page-head-main">
-          <span class="eyebrow"><span class="dot"></span>limitless Bio-Go</span>
-          <h1 class="sect-title">المادة <span class="grad-text">المبتكرة</span></h1>
-        </div>
-        <a href="{{ url('/') }}" class="back-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M11 18l6-6-6-6"/></svg>
-          الرئيسية
-        </a>
-      </div>
+      <span class="eyebrow"><span class="dot"></span>limitless Bio-Go</span>
+      <h1 class="sect-title">المادة <span class="grad-text">المبتكرة</span></h1>
       <p class="sect-lead">أكسيد الجرافين الحيوي بلا حدود: مركّب نانوي كربوني هجين ثلاثي الأبعاد (3D Hierarchical Hybrid Graphene Oxide) يدمج مخلفات نباتية مختارة — كل مكوّن يؤدي وظيفة دقيقة تكمّل عيوب غيره.</p>
     </div>
   </section>
