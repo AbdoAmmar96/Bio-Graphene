@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="copyright">
-      © {{ date('Y') }} <a href="#">شركة شريك الأعمال لتقنية المعلومات</a>. جميع الحقوق محفوظة.
+      © {{ date('Y') }} <a href="https://bp-eg.com/" target="_blank" rel="noopener">شركة شريك الأعمال لتقنية المعلومات</a>. جميع الحقوق محفوظة.
     </div>
   </div>
 </footer>

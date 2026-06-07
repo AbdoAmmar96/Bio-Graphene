@@ -27,7 +27,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow"><span class="dot"></span>إحدى شركات مجموعة <a href="{{ $mining }}" target="_blank" rel="noopener" class="mining-link">Mining Earth</a></span>
-      <h1 class="lat">Bio-Graphene
+      <h1 class="lat"><span class="h1-row"><img src="{{ asset('images/logo-mark.png') }}" alt="" class="title-mark">Bio-Graphene</span>
         <span class="sub">{{ $S['hero_eyebrow'] ?? 'منصة تقنية نانوية شاملة · Multifunctional Nano-Platform' }}</span>
       </h1>
       <p class="desc">{{ $S['hero_desc'] ?? '' }}</p>
@@ -48,8 +48,9 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       <div class="glow"></div>
       <div class="ring r1"></div>
       <div class="ring r2"></div>
-      <img src="{{ asset('images/logo-full.png') }}" alt="Bio-Graphene — Innovation for Sustainable Tech" class="hero-logo">
       <svg id="lattice" viewBox="0 0 460 460" aria-label="رسم متحرك لشبكة جرافين سداسية تلتقط أيونات المعادن"></svg>
+      <div class="logo-backdrop"></div>
+      <img src="{{ asset('images/logo-mark.png') }}" alt="Bio-Graphene" class="hero-logo">
       <span class="particle p1"><i></i>Au</span>
       <span class="particle p2"><i></i>Li⁺</span>
       <span class="particle p3"><i></i><bdi dir="ltr">REEs</bdi></span>
