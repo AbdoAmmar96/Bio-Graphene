@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام التصميم | Bio-Graphene</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+  /* صفحة العرض فقط — لا تؤثر على الموقع */
+  body{padding:0}
+  .ds-wrap{max-width:1100px;margin:0 auto;padding:64px 24px}
+  .ds-h{font-family:var(--lat);font-weight:800;font-size:2.4rem;margin-bottom:8px}
+  .ds-sub{color:var(--muted);margin-bottom:48px}
+  .ds-sec{margin:56px 0}
+  .ds-sec > h2{font-family:var(--ar);font-weight:800;font-size:1.5rem;margin-bottom:24px;padding-inline-start:14px;border-inline-start:4px solid;border-image:var(--grad) 1}
+  .ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+  .swatch{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+  .swatch .clr{height:88px}
+  .swatch .meta{padding:12px 16px;font-family:var(--lat);font-size:.82rem}
+  .swatch .meta b{display:block;font-family:var(--ar);font-size:.92rem;color:var(--text);margin-bottom:4px}
+  .swatch .meta span{color:var(--muted)}
+  .row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .type-row{padding:16px 0;border-bottom:1px solid var(--line)}
+  .type-row small{color:var(--faint);font-family:var(--lat);font-size:.75rem;display:block;margin-bottom:6px}
+  .space-bar{height:24px;background:var(--grad);border-radius:6px}
+  .space-item{text-align:center;font-family:var(--lat);font-size:.75rem;color:var(--muted)}
+  .shadow-box{width:120px;height:80px;border-radius:12px;background:var(--surface2);display:grid;place-items:center;font-family:var(--lat);font-size:.72rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="ds-wrap">
+  <div class="ds-h">Bio<span class="grad-text">Graphene</span> — Design System</div>
+  <div class="ds-sub">معاينة حيّة لنظام التصميم · افتحها على <code>/design-system.html</code></div>
+
+  <!-- ألوان -->
+  <section class="ds-sec">
+    <h2>الألوان</h2>
+    <div class="ds-grid">
+      <div class="swatch"><div class="clr" style="background:#020c1d"></div><div class="meta"><b>--bg</b><span>#020c1d</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#06142b"></div><div class="meta"><b>--bg2</b><span>#06142b</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#0a1a30"></div><div class="meta"><b>--surface</b><span>#0a1a30</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#0e2238"></div><div class="meta"><b>--surface2</b><span>#0e2238</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#1FD27A"></div><div class="meta"><b>--green</b><span>#1FD27A</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#22E08A"></div><div class="meta"><b>--green-b</b><span>#22E08A</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#19C5E0"></div><div class="meta"><b>--cyan</b><span>#19C5E0</span></div></div>
+      <div class="swatch"><div class="clr" style="background:linear-gradient(120deg,#22E08A,#19C5E0)"></div><div class="meta"><b>--grad</b><span>التدرّج الأساسي</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#E6EDF6"></div><div class="meta"><b>--text</b><span>#E6EDF6</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#9FB0C4"></div><div class="meta"><b>--muted</b><span>#9FB0C4</span></div></div>
+      <div class="swatch"><div class="clr" style="background:#64768c"></div><div class="meta"><b>--faint</b><span>#64768c</span></div></div>
+    </div>
+  </section>
+
+  <!-- الخطوط -->
+  <section class="ds-sec">
+    <h2>الخطوط</h2>
+    <div class="type-row"><small>h1 · Cairo 800 · clamp(2.1rem→3.6rem)</small><div style="font-family:var(--ar);font-weight:800;font-size:3rem">المادة المبتكرة</div></div>
+    <div class="type-row"><small>h2.sect-title · Cairo 800</small><h2 class="sect-title" style="margin:0">رؤية <span class="grad-text">المستقبل</span></h2></div>
+    <div class="type-row"><small>body · Tajawal 400</small><p style="margin:0;max-width:640px">أكسيد الجرافين الحيوي بلا حدود: مركّب نانوي كربوني هجين ثلاثي الأبعاد يدمج مخلفات نباتية مختارة.</p></div>
+    <div class="type-row"><small>Sora · لاتيني وأرقام</small><div style="font-family:var(--lat);font-weight:700;font-size:1.6rem">Bio-Graphene · Au · 100% · REE<sub>s</sub></div></div>
+    <div class="type-row"><small>.eyebrow</small><span class="eyebrow"><span class="dot"></span>The Masterpiece</span></div>
+  </section>
+
+  <!-- المسافات -->
+  <section class="ds-sec">
+    <h2>المسافات (8px grid)</h2>
+    <div class="row" style="align-items:flex-end">
+      <div class="space-item"><div class="space-bar" style="width:8px"></div>8</div>
+      <div class="space-item"><div class="space-bar" style="width:16px"></div>16</div>
+      <div class="space-item"><div class="space-bar" style="width:24px"></div>24</div>
+      <div class="space-item"><div class="space-bar" style="width:32px"></div>32</div>
+      <div class="space-item"><div class="space-bar" style="width:40px"></div>40</div>
+      <div class="space-item"><div class="space-bar" style="width:48px"></div>48</div>
+      <div class="space-item"><div class="space-bar" style="width:64px"></div>64</div>
+      <div class="space-item"><div class="space-bar" style="width:96px"></div>96</div>
+    </div>
+  </section>
+
+  <!-- الأزرار والمكوّنات -->
+  <section class="ds-sec">
+    <h2>الأزرار والمكوّنات</h2>
+    <div class="row" style="margin-bottom:32px">
+      <a class="btn btn-grad">زر أساسي
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost">زر ثانوي</a>
+    </div>
+    <div class="row">
+      <div class="card" style="max-width:280px">
+        <h3>عنوان البطاقة</h3>
+        <p>وصف مختصر للبطاقة يوضّح المحتوى بأسلوب بسيط.</p>
+        <a class="more">التفاصيل
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- الزوايا والظلال -->
+  <section class="ds-sec">
+    <h2>الزوايا والظلال</h2>
+    <div class="row">
+      <div class="shadow-box" style="border-radius:16px">r 16px</div>
+      <div class="shadow-box" style="border-radius:22px">r-lg 22px</div>
+      <div class="shadow-box" style="border-radius:999px;width:140px">999px</div>
+      <div class="shadow-box" style="box-shadow:0 8px 30px rgba(31,210,122,.28)">ظل الزر</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

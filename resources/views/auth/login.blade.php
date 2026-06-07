@@ -12,7 +12,7 @@
 <body>
 <div class="login-wrap">
   <div class="login-card">
-    <div class="brand"><span class="hex">B</span><span>Bio<span class="grad-text">Graphene</span></span></div>
+    <img src="{{ asset('images/logo-full.png') }}" alt="Bio-Graphene" class="login-logo">
     <p class="cap">لوحة التحكم — تسجيل الدخول</p>
 
     <form method="POST" action="{{ route('login') }}">

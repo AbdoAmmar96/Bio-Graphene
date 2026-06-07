@@ -15,7 +15,7 @@
 @php($galleryOn = ($S['gallery_enabled'] ?? '1') === '1')
 <header id="header">
   <div class="wrap nav">
-    <a href="{{ url('/') }}" class="logo"><span class="hex">B</span><span>Bio<span class="grad-text">Graphene</span></span></a>
+    <a href="{{ url('/') }}" class="logo"><img src="{{ asset('images/logo-mark.png') }}" alt="Bio-Graphene" class="logo-mark"><span>Bio<span class="grad-text">Graphene</span></span></a>
     <nav class="nav-links">
       <a href="{{ route('material') }}">المادة المبتكرة</a>
       <a href="{{ route('applications') }}">التطبيقات</a>
@@ -46,7 +46,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="{{ url('/') }}" class="logo"><span class="hex">B</span><span>Bio<span class="grad-text">Graphene</span></span></a>
+        <a href="{{ url('/') }}" class="logo"><img src="{{ asset('images/logo-mark.png') }}" alt="Bio-Graphene" class="logo-mark"><span>Bio<span class="grad-text">Graphene</span></span></a>
         <p>{{ $S['footer_about'] ?? '' }}</p>
       </div>
       <div class="foot-col">

@@ -48,6 +48,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
       <div class="glow"></div>
       <div class="ring r1"></div>
       <div class="ring r2"></div>
+      <img src="{{ asset('images/logo-full.png') }}" alt="Bio-Graphene — Innovation for Sustainable Tech" class="hero-logo">
       <svg id="lattice" viewBox="0 0 460 460" aria-label="رسم متحرك لشبكة جرافين سداسية تلتقط أيونات المعادن"></svg>
       <span class="particle p1"><i></i>Au</span>
       <span class="particle p2"><i></i>Li⁺</span>
