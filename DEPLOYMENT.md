@@ -143,6 +143,63 @@ sudo chmod -R 775 storage bootstrap/cache
 
 ---
 
+## 🟠 الاستضافة (Hostinger — خطة Laravel + SQLite) ⭐ سيرفرك
+
+> Hostinger يوفّر **hPanel** فيه SSH و Git و Setup PHP. أنظف طريقة عبر Git.
+
+**1. فعّل SSH** من hPanel → Advanced → SSH Access (سجّل الـ host/port/username — تستخدمها إنت فقط).
+
+**2. ادخل بالـ SSH** وروح لمجلد الموقع:
+```bash
+ssh username@your-server -p PORT
+cd domains/your-domain.com          # أو public_html حسب إعداد الخطة
+```
+
+**3. اجلب الكود من GitHub:**
+```bash
+git clone https://github.com/AbdoAmmar96/Bio-Graphene.git .
+```
+
+**4. الاعتماديات والبيئة:**
+```bash
+composer install --no-dev --optimize-autoloader
+cp .env.production.example .env       # القالب الجاهز
+nano .env                             # عدّل APP_URL لدومينك فقط، ثم احفظ (Ctrl+O ثم Ctrl+X)
+php artisan key:generate
+```
+
+**5. قاعدة البيانات SQLite (ملف واحد — بدون أي بيانات دخول):**
+```bash
+touch database/database.sqlite
+php artisan migrate --seed --force
+php artisan storage:link
+```
+
+**6. كاش الإنتاج:**
+```bash
+php artisan config:cache && php artisan route:cache && php artisan view:cache
+```
+
+**7. document root:** من hPanel تأكد إن الدومين بيشير لمجلد **`public/`** بتاع المشروع.
+- لو الخطة بتخدم من `public_html` مباشرة: اعمل المشروع في مجلد أعلى (مثل `~/bio-graphene`) واجعل `public_html` يشير لـ `~/bio-graphene/public` (Document Root من hPanel → Websites → إعدادات الدومين).
+
+**8. PHP 8.3:** من hPanel → Advanced → PHP Configuration → اختر 8.3.
+
+**9. SSL:** من hPanel → Security → SSL → فعّل (مجاني). وتأكد `APP_URL` يبدأ بـ `https://`.
+
+**10. 🔴 غيّر كلمة مرور الأدمن** (إلزامي — انظر قسم الأمان فوق).
+
+### التحديث على Hostinger لاحقًا
+```bash
+cd ~/path-to-project
+git pull
+composer install --no-dev --optimize-autoloader
+php artisan migrate --force
+php artisan optimize:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache
+```
+
+---
+
 ## 🐘 الاستضافة (ج): Laravel Herd / Valet (محلي أو ماك)
 
 ضع المشروع في مجلد Herd، وسيُخدَم تلقائيًا على `https://bio-graphene.test`. ثم:
