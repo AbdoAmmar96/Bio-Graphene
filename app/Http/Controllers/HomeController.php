@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\{Material, Application, VisionAxis, VisionStat, VisionDoc, Feature, GalleryImage, SiteSetting};
+use App\Models\{Material, Application, VisionAxis, VisionStat, VisionDoc, Feature, GalleryFolder, SiteSetting};
 
 class HomeController extends Controller
 {
@@ -57,7 +57,11 @@ class HomeController extends Controller
     {
         abort_unless(SiteSetting::get('gallery_enabled', '1') === '1', 404);
         return view('public.sections.gallery', [
-            'gallery' => GalleryImage::orderBy('sort')->get(),
+            'folders' => GalleryFolder::orderBy('sort')
+                ->with('images')
+                ->get()
+                ->filter(fn ($f) => $f->images->isNotEmpty())
+                ->values(),
         ]);
     }
 

@@ -290,3 +290,8 @@ footer{border-top:1px solid var(--line);margin-top:96px;padding:64px 0 32px;back
 .article-cta p{color:var(--muted);font-size:.95rem;max-width:520px;line-height:1.7}
 .flash{background:var(--grad-soft);border:1px solid var(--line-acc);color:var(--green-b);padding:16px 24px;border-radius:14px;font-family:var(--ar);font-weight:700;margin-bottom:16px;text-align:center}
 .gtile img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+/* gallery folders (public) */
+.folder-title{font-family:var(--ar);font-weight:800;font-size:1.5rem;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+figure.gtile{aspect-ratio:auto;display:flex;flex-direction:column;margin:0}
+figure.gtile img{aspect-ratio:4/3;height:auto}
+figure.gtile figcaption{position:relative;z-index:1;padding:10px 14px;font-size:.85rem;color:var(--muted);font-weight:600;background:var(--surface)}

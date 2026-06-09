@@ -27,7 +27,7 @@ $mining = $S['mining_url'] ?? 'https://www.miningearth.com';
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow"><span class="dot"></span>إحدى شركات مجموعة <a href="{{ $mining }}" target="_blank" rel="noopener" class="mining-link">Mining Earth</a></span>
-      <h1 class="lat"><span class="h1-row"><img src="{{ asset('images/logo-mark.png') }}" alt="" class="title-mark">Bio-Graphene</span>
+      <h1 class="lat"><span class="h1-row"><span class="grad-text">Bio-Graphene</span></span>
         <span class="sub">{{ $S['hero_eyebrow'] ?? 'منصة تقنية نانوية شاملة · Multifunctional Nano-Platform' }}</span>
       </h1>
       <p class="desc">{{ $S['hero_desc'] ?? '' }}</p>

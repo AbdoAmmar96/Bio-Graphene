@@ -49,8 +49,16 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::put('vision', [VisionController::class, 'update'])->name('vision.update');
 
     Route::get('gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    // الفولدرات
+    Route::post('gallery/folders', [GalleryController::class, 'storeFolder'])->name('gallery.folders.store');
+    Route::put('gallery/folders/{folder}', [GalleryController::class, 'renameFolder'])->name('gallery.folders.rename');
+    Route::delete('gallery/folders/{folder}', [GalleryController::class, 'destroyFolder'])->name('gallery.folders.destroy');
+    Route::post('gallery/folders/sort', [GalleryController::class, 'sortFolders'])->name('gallery.folders.sort');
+    // الصور
     Route::post('gallery', [GalleryController::class, 'store'])->name('gallery.store');
-    Route::delete('gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+    Route::put('gallery/{image}', [GalleryController::class, 'updateImage'])->name('gallery.update');
+    Route::delete('gallery/{image}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+    Route::post('gallery/sort', [GalleryController::class, 'sortImages'])->name('gallery.sort');
 
     Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
     Route::patch('messages/{message}/read', [MessageController::class, 'read'])->name('messages.read');

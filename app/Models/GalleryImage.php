@@ -1,7 +1,14 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 class GalleryImage extends Model
 {
-    protected $fillable = ['path','caption','sort'];
+    protected $fillable = ['folder_id','path','caption','sort'];
+
+    public function folder(): BelongsTo
+    {
+        return $this->belongsTo(GalleryFolder::class, 'folder_id');
+    }
 }

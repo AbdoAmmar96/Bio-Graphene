@@ -3,12 +3,6 @@
 @section('title', $title.' | '.($S['site_name'] ?? 'Bio-Graphene'))
 @section('desc', $subtitle ?? '')
 
-@php
-  // تقدير زمن القراءة من عدد الكلمات في المتن
-  $words = max(1, str_word_count(strip_tags($body)));
-  $readMins = max(1, (int) ceil($words / 180));
-@endphp
-
 @section('content')
 <main>
   <article class="article">
@@ -18,11 +12,6 @@
         <h1>{{ $title }}</h1>
         @if(!empty($subtitle))<p class="sub">{{ $subtitle }}</p>@endif
         <div class="article-meta">
-          <span class="amitem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
-            {{ $readMins }} دقائق قراءة
-          </span>
-          <span class="amdot"></span>
           <span class="amitem grad-text" style="font-weight:700">Bio·Graphene</span>
         </div>
       </div>
