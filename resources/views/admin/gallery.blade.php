@@ -83,12 +83,13 @@
               <div class="cell-foot">
                 <form method="POST" action="{{ route('admin.gallery.update', $img) }}" class="cap-form">
                   @csrf @method('PUT')
-                  <input name="caption" value="{{ $img->caption }}" placeholder="اسم/وصف الصورة" maxlength="200">
-                  <button class="btn btn-ghost btn-sm" type="submit">حفظ</button>
+                  <label>اسم / وصف الصورة</label>
+                  <input name="caption" value="{{ $img->caption }}" placeholder="اكتب اسمًا أو وصفًا…" maxlength="200">
+                  <button class="btn btn-grad btn-sm" type="submit">حفظ الوصف</button>
                 </form>
-                <form method="POST" action="{{ route('admin.gallery.destroy', $img) }}" onsubmit="return confirm('حذف الصورة؟')">
+                <form method="POST" action="{{ route('admin.gallery.destroy', $img) }}" class="del-form" onsubmit="return confirm('حذف الصورة؟')">
                   @csrf @method('DELETE')
-                  <button class="btn btn-danger btn-sm" type="submit">حذف</button>
+                  <button class="btn btn-danger btn-sm" type="submit">حذف الصورة</button>
                 </form>
               </div>
             </div>
