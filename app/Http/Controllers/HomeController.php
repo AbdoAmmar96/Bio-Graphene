@@ -65,6 +65,14 @@ class HomeController extends Controller
         ]);
     }
 
+    public function galleryFolder(string $slug)
+    {
+        abort_unless(SiteSetting::get('gallery_enabled', '1') === '1', 404);
+        $folder = GalleryFolder::where('slug', $slug)->with('images')->firstOrFail();
+        abort_if($folder->images->isEmpty(), 404);
+        return view('public.sections.gallery-folder', ['folder' => $folder]);
+    }
+
     /* ---------- صفحات التفاصيل (المقالات) ---------- */
 
     public function application(string $slug)

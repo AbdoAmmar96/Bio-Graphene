@@ -22,6 +22,7 @@ Route::get('/applications', [HomeController::class, 'applicationsPage'])->name('
 Route::get('/vision', [HomeController::class, 'visionPage'])->name('vision');
 Route::get('/features', [HomeController::class, 'featuresPage'])->name('features');
 Route::get('/gallery', [HomeController::class, 'galleryPage'])->name('gallery');
+Route::get('/gallery/{slug}', [HomeController::class, 'galleryFolder'])->name('gallery.folder');
 
 /* صفحات التفاصيل (المقالات) */
 Route::get('/applications/{slug}', [HomeController::class, 'application'])->name('app.show');
